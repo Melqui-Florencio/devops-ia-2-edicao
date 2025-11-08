@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conversao
+  namespace: production
+spec:
+  selector:
+    matchLabels:
+      app: conversao
+  template:
+    metadata:
+      labels:
+        app: conversao
+    spec:
+      containers:
+      - name: web
+        image: fabricioveronez/conversao-distancia:v1
+        ports:
+        - containerPort: 8000

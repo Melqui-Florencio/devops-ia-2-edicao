@@ -1,0 +1,6 @@
+services:
+  devopsia2edicao:
+    image: devopsia2edicao
+    build:
+      context: .
+      dockerfile: ./Dockerfile
